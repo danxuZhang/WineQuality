@@ -1,3 +1,17 @@
+# test folders and files
+test/
+test.py
+test.ipynb
+
+# MacOS temp files
+.DS_Store
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints
+
+# vscode settings
+.vscode
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
