@@ -7,19 +7,22 @@ import torch.optim as optim
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from typing import Tuple
 from sklearn.model_selection import train_test_split
 
 __author__ = "Zhang Danxu"
 __date__ = "16/04/2022"
 __email__ = "dzhang022@e.ntu.edu.sg"
 __credits__ = ["Zhang Danxu", "Lohia Vardhan", "Sannabhadti Shikha Deepak"]
-__copyright = "Copyright 2022, NTU SC1015 - Wine Quality Mini Project"
+__copyright__ = "Copyright 2022, NTU SC1015 - Wine Quality Mini Project"
 __license__ = "MIT"
 __status__ = "Development"
 
+
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-def load_data(file_path) -> (torch.tensor, torch.tensor, torch.tensor, torch.tensor):
+
+def load_data(file_path) -> Tuple[torch.tensor, torch.tensor, torch.tensor, torch.tensor]:
     """ Load data from csv files and return tensors for training and testing
     :param file_path: file path of predictors and response csv files
     :return: tuple of 4 tensors
