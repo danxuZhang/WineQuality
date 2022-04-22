@@ -5,7 +5,6 @@ This is the miniproject submission for mod SC1015. We are group 9 in the Lab Gro
 To run the project please install the following python libraries:
 1. Tabulate
 2. pytorch
-3. 
 
 The dataset that we have used is: https://archive.ics.uci.edu/ml/datasets/Wine+Quality
 You can also find this in the data folder of the github repo. For this project, we have performed the data analysis on the red wine.
