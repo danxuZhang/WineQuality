@@ -25,11 +25,11 @@ This miniproject focused on [UCI Machine Learning Repository Wine Quality Data S
 ## File Structure 📂
 - `data/`: datasets
     - `raw/winequality-red.csv`: raw dataset downloaded from UCI Website
-    - `refined_wine.csv`: dataset after dopping null values, duplicated values and outliers
+    - `refined_wine.csv`: dataset after cleaning
     - `reclassified_wine.csv`: dataset after reclassification
     - `predictors.csv`: cleaned and scaled predictor variables
     - `response.csv`: cleaned response variable
-    - `winequality.txt`: metadata for dataset
+    - `winequality.txt`: description for datasets
 
 -  `src/`: jupyter notebooks and python scripts
     - `data-clean-up.ipynb`: notebook for data cleaning;
@@ -48,12 +48,10 @@ In [data clean-up](src/data-clean-up.ipynb), we first dropped null values, dupli
 [Exploratory data anaysis](src/eda.ipynb) includes histogram with kde plots, boxplots for data before and after reclassificatin, finding corrleation between variables, and preforming Point Biserial Correlation.
 
 ## Machine Learning 🤖
-In [machine learning](src/ml.ipynb), we used three algorighms: decision tree, stochastic gradient descent, and support vector machine with rbf kernel.  
-We first built a decision tree of depth 4, and the training accuracy is 91% and testing accuracy is 86%. But since we had a relative large number of features, the model is a bit overfitting.  
-The second model we built is stochastic gradient descent. We set learning rate to be $10^{-3}$ and do $10^5$ times iterations, and the loss funcion has reached a minimal value. [Here](src/loss_history.png) is how loss value gradually decrease as number of iterations increases. The training accuray is 89% and testing accuracy is 88%.  
-The stochastic gradient descent model used a simple linear layer, but since we have a relative large number of features, it could have some non-linear relationship. So the third model we built is support vector machine with rbf kernel. To avoid overfitting, we set parameter gamma to a small value. The training accuracy is 90% and testing accuracy is 89%.  
+In [machine learning](src/ml.ipynb), we first used decision trees, but since we had a relative large number of features, decision trees was a bit overfitting. The second model we built was stochastic gradient descent, with PyTorch's BCE loss funcition and SGD optimizer. SGD used a simple linear layer, but there could be some non-linear relationships. So, the last model we built is support vector machine with RBF kernel. The final training accuracy for SVM is 90%, and testing accuracy is 89%. 
 
-
-
-
+## Contributors 👨‍💻
+- **Sannabhadti Shikha Deepak**: Data Clean-up  
+- **Lohia Vardhan**: Exploratory Data Analysis  
+- **Zhang Danxu**: Machine Learning
 
